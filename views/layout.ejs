@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title><%=page_title%></title>
+  <link rel = "stylesheet" type = "text/css" href = '/stylesheets/style.css' />
+    <link rel = "stylesheet" type = "text/css" href = '/stylesheets/index.css' />
+    <link rel = "stylesheet" type = "text/css" href = '/stylesheets/book_detail.css' />
+    <link rel = "stylesheet" type = "text/css" href = '/stylesheets/book_knowledge.css' />
+    <link rel = "stylesheet" type = "text/css" href = '/stylesheets/bookIndex.css' />
+    <link rel = "stylesheet" type = "text/css" href = '/stylesheets/book_sentence.css' />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <style>
+  body{
+    font-family:'小塚ゴシック Pro6N R','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック', Arial, sans-serif;
+  }
+  </style>
+</head>
+
+<body>
+  <div id="header">
+    <div class="container">
+      <div class="header_left">
+
+        <a href="/" class="app_title">bookLearning</a>
+      </div>
+
+      <div class="header_right">
+        <ul>
+          <%if(typeof user !== 'undefined'){%>
+
+          <a href="/profile/<%=user.id%>"><li><%=user.user_name%> <span class="san">さん</span></li></a>
+          <a href="/logout"><li>logout</li></a>
+          <%}else{%>
+            <li><a href="/register">サインアップ</a></li>
+            <a href="/logout"><li>login</li></a>
+            <%};%>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="contents">
+  <%- body %>
+</div>
+  <!--<div id="footer">
+    <div class="container">
+      <p class="copyright">Copyright © 2017 Yoshihiro Nakazawa All Rights Reserved.</p>
+    </div>
+  </div>
+-->
+  </body>
+
+  </html>

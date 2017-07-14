@@ -1,0 +1,42 @@
+ <% layout('layout') %>
+
+
+<div class="container">
+  <div id='bookIndex-wrapper'>
+    <div id="bookIndex-title">
+    <img src="<%=bookList.book_image%>" class="bookIndexImage">
+    <h1><%=bookList.book_name%></h1>
+  </div>
+
+</div>
+</div>
+
+<script type="text/javascript">
+var indexlength=<%=bookList.book_index%>;
+var bw =document.getElementById('bookIndex-wrapper');
+for(var i =1; i<=indexlength;i++){
+  var book_index=document.createElement('a');
+  book_index.className='book-index';
+  book_index.href='/book_sentence/'+i+'';
+  bw.appendChild(book_index);
+  var indexDraw =document.createElement('div');
+  indexDraw.className='Indexdraw';
+  var indexTitle=document.createElement('h2');
+  indexTitle.className='IndexTitle';
+  var indexContent =document.createElement('h4');
+  indexContent.className='IndexContent';
+  <%indexList.forEach(function(index){%>
+   if(<%= index.index_id%>==i){
+    indexTitle.innerHTML='<%=index.indexTitle%>';
+    indexContent.innerHTML='<%=index.indexContent%>';
+  };
+  <%});%>
+  var indexShow =document.createElement('div');
+  indexShow.className='Indexshow';
+  indexShow.innerHTML='第'+i+'章';
+  book_index.appendChild(indexDraw);
+  book_index.appendChild(indexTitle);
+  book_index.appendChild(indexContent);
+  book_index.appendChild(indexShow);
+};
+</script>

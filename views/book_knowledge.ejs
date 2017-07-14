@@ -1,0 +1,41 @@
+<% layout('layout') %>
+
+<div class="container">
+<div id='slide'>
+  <div id="button-prev" onclick="prevButton()"><<</div>
+  <img src="<%=slideList[0].image_path%>" id="slides">
+  <div id="button-next" onclick="nextButton()">>></div>
+  <div id="counter"></div>
+  <a href="/bookIndex" class="bookIndex_href">本の目次へ　</a>
+</div>
+</div>
+
+
+
+<script type="text/javascript">
+console.log(<%=slideList.length%>);
+var slides= new Array(<%=slideList.length%>);
+console.log(slides);
+var man =0;
+<% slideList.forEach(function(slide){%>
+    slides[man]='<%=slide.image_path%>';
+    man++;
+<%});%>
+
+console.log(slides);
+
+function slideIndex(){
+  var index =document.getElementById('counter');
+  for(var i=0;i<slides.length;i++){
+    index.innerHTML+="<div class='slideIndex' onclick='changeImg("+i+")'></div>";
+  }
+}
+
+slideIndex();
+var firstIndex = document.getElementsByClassName('slideIndex');
+firstIndex[0].style.backgroundColor='#FF6860';
+</script>
+
+
+
+<script type="text/javascript" src="/javascripts/slide.js"></script>

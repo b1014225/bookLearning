@@ -1,0 +1,14 @@
+<% layout('layout') %>
+ <div id="book_detail-background">
+<div class="container">
+<div id='book_detail_wrapper'>
+<p class="bookName"><%=book.book_name%></p>
+<img src="<%=book.book_image%>" class="book-detail-image">
+<div class="book_content">
+<h3 class="content_title">内容</h3>
+<p><%=book.book_content%></p>
+</div>
+<a href="/book_knowledge" class="bookRead">BOOK READ!!</a>
+</div>
+</div>
+</div>

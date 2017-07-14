@@ -1,0 +1,24 @@
+
+ <% layout('layout') %>
+
+<div class="login_wrapper">
+
+<form action="/login" method="post" class="form_login">
+  <ul>
+    <li>
+      <input type="text" name="user_name" placeholder="userName" class="input_login" required>
+    </li>
+    <li>
+      <input type="password" name="password" placeholder="password" class="input_login input_login_top" required>
+    </li>
+    <li>
+      <input type="submit" value="ログイン" class="buttonType">
+    </li>
+  </ul>
+</form>
+
+</div>
+
+<% if( typeof err_message !=='undefined'){%>
+  <h1 class="err_message"><%=err_message%></h1>
+  <%};%>

@@ -1,0 +1,63 @@
+ <% layout('layout') %>
+<div class="container">
+  <h1 id="paragTitle">第<%=sentenceId%>章</h1>
+<div id="tab">
+
+  <ul id="tab_menuId">
+
+  </ul>
+  <div id="sentence">
+<%- body %>
+<div class="page">
+<div id="checkTest">
+  <form  id="checkForm" name="test" action="#" method="post">
+    <div id="cf"></div>
+
+    <input type="submit" value="送信" class="test-form-button">
+  </form>
+</div>
+</div>
+
+</div>
+
+</div>
+
+<script type="text/javascript">var sentenceId=<%=sentenceId%>;</script>
+<script type="text/javascript" src="/javascripts/sentence.js"></script>
+<script type="text/javascript" src="/javascripts/checkTest.js"></script>
+<script type="text/javascript">
+if(<%=bookId%>==1 && <%=sentenceId%>==1){
+  checkTest1('1)ゴンの首をしめたのは？','伊藤');
+  checkTest1('2)ゴンの首をしめたのは？','ゴン');
+  checkTest2('3)ゴンの首をしめたのは？','うなぎ','ゴン','伊藤','ゆうき','うなぎ');
+  checkTest1('2)ゴンの首をしめたのは？','え？');
+  checkTest2('3)ゴンの首をしめたのは？','ん','ゴン','伊藤','ん','うなぎ');
+}
+
+
+
+(function(){
+var menu = document.getElementById('tab_menuId');
+var inner = document.getElementById('tab_content_innerId');
+var menus = menu.getElementsByTagName('a');
+var current;
+for (var i = 0, l = menus.length;i < l; i++){
+  tab_init(menus[i], i);
+}
+function tab_init(link, index){
+  if (!current){
+    current = link;
+    link.className = 'active';
+  }
+  link.onclick = function(){
+    current.className = '';
+    link.className = 'active';
+    current = link;
+    inner.style.left = -450 * index + 'px';
+    return false;
+  };
+}
+})();
+
+
+</script>

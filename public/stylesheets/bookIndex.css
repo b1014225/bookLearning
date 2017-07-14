@@ -1,0 +1,53 @@
+#bookIndex-wrapper{
+  margin-top:80px;
+  text-align: center;
+}
+
+.book-index{
+  border-bottom: solid 1px #808080;
+    overflow: hidden;
+    margin-top:20px;
+    padding-bottom:10px ;
+    display: block;
+}
+
+.book-index:hover{
+  opacity:0.4;
+}
+
+.Indexdraw{
+  float:left;
+  border:solid 1px #808080;
+  width:200px;
+  height:100px;
+}
+
+.IndexTitle{
+  float:left;
+  margin-left:70px;
+}
+
+.IndexContent{
+  float:left;
+}
+
+.Indexshow{
+  float:right;
+
+}
+
+.bookIndexImage{
+  width:15%;
+  float:left;
+}
+
+#bookIndex-title{
+  overflow: hidden;
+  width:20%;
+  display:inline-block;
+}
+
+#bookIndex-title h1{
+
+  padding:10px　0;
+}

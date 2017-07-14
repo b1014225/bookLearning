@@ -1,0 +1,28 @@
+#index-background{
+  margin-top: 75px;
+  width: 100%;
+  height:1000px;
+  position: absolute;
+  background-image: url('/images/book-background.jpeg');
+}
+
+.mask{
+  background-color:rgba(255,255,255,0.2);
+  width: 100%;
+  height:1000px;
+  position: absolute;
+
+}
+
+
+.book-images{
+  margin-top:50px;
+  margin-left: 50px;
+  height:250px;
+  
+  box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.4);
+}
+
+.left{
+  margin-left: 0;
+}

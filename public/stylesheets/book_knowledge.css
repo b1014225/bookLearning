@@ -1,0 +1,146 @@
+/*.slide {
+	width: 100%;
+	height: 600px;
+	position: relative;
+	margin: 100px auto;
+	margin-bottom:0;
+}
+
+.slide .item {
+	width: 95%;
+	height: 560px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	padding: 20px;
+	background-image: url('/images/book-background.jpeg');
+	color: white;
+	font-size: 100px;
+}
+
+
+.slide .item.next {
+	left: 30px;
+	opacity: 0;
+}
+
+.slide .item.preview {
+	left: -30px;
+	opacity: 0;
+}
+
+/*	左右のボタン	*/
+/*
+.slide .slide_navi {
+	width: 100%;
+	height:600px;
+	position: relative;
+}
+
+.slide .slide_navi li {
+	width: 2em;
+	cursor: pointer;
+	display: block;
+	line-height: 2em;
+	position: absolute;
+	top: 50%;
+	z-index: 10;
+	margin: -1em 0;
+	border-radius: 6px;
+	color: #fff;
+	text-align: center;
+	background: #333;
+}
+
+.slide .slide_navi li.next {
+	right: -3em;
+}
+
+.slide .slide_navi li.prev {
+	left: -3em;
+}
+
+/*	ページング	*/
+/*
+.slide .slide_paging {
+	margin: 20px 0 0;
+}
+
+.slide .slide_paging li {
+	cursor: pointer;
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+.slide .slide_paging li.current {
+	color: #f00;
+	font-weight: 700;
+}
+*/
+#slide{
+	margin-top:90px;
+	width:100%;
+	height:auto;
+	text-align: center;
+}
+
+#slides{
+	width:80%;
+	height:600px;
+	padding: 20px;
+	background-color: #fff;
+	box-shadow: 1px 1px 5px 5px rgba(0,0,0,0.2)inset;
+}
+
+
+#button-prev,#button-next{
+	cursor: pointer;
+	width:4%;
+	height:4%;
+	font-size: 30px;
+	background-color: #FF6860;
+	border-radius: 10px;
+	text-align: center;
+	color: #fff;
+	margin-top:20%;
+	z-index: -100;
+}
+
+#button-prev:hover,#button-next:hover{
+	background-color: #fff;
+	border-radius: 10px;
+	color: #FF6860;
+	border:1px solid #FF6860;
+}
+
+#button-prev{
+	float:left;
+	margin:;
+}
+
+#button-next{
+	float:right;
+}
+
+
+.bookIndex_href{
+  float: right;
+}
+
+.slideIndex{
+	width: 20px;
+	height:20px;
+	background-color: #FFF;
+	border:1px solid #FF6860;
+	border-radius: 100px;
+	display:inline-block;
+	margin-left:30px;
+	cursor: pointer;
+}
+
+.slideIndex:hover{
+	background-color:  #FF6860;
+	width:25px;
+	height:25px;
+}
